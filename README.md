@@ -1,4 +1,4 @@
-# Fundamentos de Desenvolvimento com C# [22E1_1]
+# Fundamentos de Desenvolvimento com C#
 
 ![](images/logo.png)
 
