@@ -1,6 +1,6 @@
 ### Fundamentos de Desenvolvimento com C# - TP01
 
-TP01: [Teste de Performance 01](https://lms.infnet.edu.br/moodle/mod/assign/view.php?id=276162)
+[Teste de Performance 01](https://lms.infnet.edu.br/moodle/mod/assign/view.php?id=276162)
 
 - Exemplo de execução da operação de Adição:
 
