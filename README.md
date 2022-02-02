@@ -9,4 +9,4 @@
 
 ## Sobre
 
-Nesse repositório estão contidos todos os TPs realizados na disciplina Fundamentos de Desenvolvimento com C# do curso de Engenharia de Computação do INFNET.
+Nesse repositório estão contidos todos os TPs realizados na disciplina Fundamentos de Desenvolvimento com C# do curso de Engenharia da Computação do INFNET.
