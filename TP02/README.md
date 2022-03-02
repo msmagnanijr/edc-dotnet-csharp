@@ -11,5 +11,17 @@ o tema do projeto de bloco que nesse caso é um agregador de reviews ( filmes, s
 
 ![](images/app.gif)
 
+### Funcionalidades Implementadas até o Momento
+
+ - Adicionar um novo Filme
+ - Pesquisar um filme
+ - Remover um filme 
+
 ### Entidades Mapeadas até o Momento
+
  - Movies
+
+### Dependências
+ - Microsoft.EntityFrameworkCore.SqlServer (6.0.2)
+ - Microsoft.EntityFrameworkCore.Tools (6.0.2)
+ - Colorful.Console (1.2.15)
