@@ -31,3 +31,7 @@ o tema do projeto de bloco que nesse caso é um agregador de reviews ( filmes, s
 
  - Command
  - Repository 
+ 
+### Code Metrics Results
+ 
+ ![](images/code_metrics.png)
