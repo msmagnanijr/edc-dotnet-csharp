@@ -4,7 +4,8 @@
 
 ### Sobre a Aplicação Awesome Tomatoes
 
-Essa aplicação foi inspirada no Rotten Tomatoes que é um website americano, agregador de críticas de cinema e televisão.
+Essa aplicação foi inspirada no Rotten Tomatoes que é um website americano, agregador de críticas de cinema e televisão. O objetivo do Awesome Tomatoes é implementar
+o tema do projeto de bloco que nesse caso é: Agregador de Reviews ( Filmes, Séries).
 
 ### Exemplo de Execução da Aplicação:
 
