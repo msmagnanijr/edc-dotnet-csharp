@@ -22,6 +22,12 @@ o tema do projeto de bloco que nesse caso é um agregador de reviews ( filmes, s
  - Movies
 
 ### Dependências
+
  - Microsoft.EntityFrameworkCore.SqlServer (6.0.2)
  - Microsoft.EntityFrameworkCore.Tools (6.0.2)
  - Colorful.Console (1.2.15)
+
+### Padrões de Projeto Utilizados
+
+ - Command
+ - Repository 
