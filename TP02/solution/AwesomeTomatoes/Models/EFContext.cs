@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace GerenciamentoAniversario.Models
+namespace AwesomeTomatoes.Models
 {
     public class EFContext : DbContext
     {
@@ -11,7 +11,7 @@ namespace GerenciamentoAniversario.Models
             optionsBuilder.UseSqlServer(connectionString);
         }
 
-        public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<Movies>? Movies { get; set; }
 
     }
 }
