@@ -11,3 +11,4 @@ Essa aplicação foi inspirada no Rotten Tomatoes que é um website americano, a
 ![](images/app.gif)
 
 ### Entidades Mapeadas até o Momento
+ - Movies
