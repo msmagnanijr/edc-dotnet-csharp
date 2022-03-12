@@ -1,0 +1,67 @@
+﻿@model IEnumerable<WebATomataoes.ViewModels.FilmesViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de Filmes</h1>
+<br />
+<p>
+    <a asp-action="Create" class="btn btn-dark">Adicionar um Novo Filme</a>
+    <a asp-action="Index" class="btn btn-dark">Recarregar a Lista de Filmes</a>
+</p>
+<br />
+@if (Model != null && Model.Count() != 0)
+{
+    <form asp-action="Index">
+        <p>
+            <label>Nome: </label>
+            <input type="text" name="SearchString" placeholder="Digite o nome do Filme"/>
+            <input type="submit" value="Filtrar" class="btn btn-secondary"/>
+        </p>
+    </form>
+
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Id
+            </th>
+            <th>
+               Nome
+            </th>
+            <th>
+               Estúdio
+            </th>
+            <th>
+               Data de Lançaamento
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estudio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataLancamento)
+            </td>
+            <td>
+                @Html.ActionLink("Atualizar", "Edit", new { id=item.Id }, new { @class = "btn btn-success"}) 
+                @Html.ActionLink("Detalhes", "Details", new {id=item.Id }, new { @class = "btn btn-secondary"})
+                @Html.ActionLink("Remover", "Delete", new { id=item.Id }, new { @class = "btn btn-danger"})
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+}
