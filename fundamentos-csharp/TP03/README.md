@@ -41,7 +41,3 @@ NUnit está sendo utilizado para execução de testes unitários.
 
  - Command
  - Repository
-
-### Code Metrics Results
-
- ![](images/code_metrics.png)
