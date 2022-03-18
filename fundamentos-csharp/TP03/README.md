@@ -28,7 +28,6 @@ Atualmente a aplicação suporta dois idiomas: PT (Português) e EN (Inglês).
 
 ### Entidades Mapeadas até o Momento
 
- - Movies
 
 ```mermaid
  classDiagram

@@ -26,7 +26,6 @@ o tema do projeto de bloco que nesse caso é um agregador de reviews ( filmes, s
 
 ### Entidades Mapeadas até o Momento
 
- - Filmes
 
 ```mermaid
  classDiagram
