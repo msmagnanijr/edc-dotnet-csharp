@@ -28,6 +28,15 @@ o tema do projeto de bloco que nesse caso é um agregador de reviews ( filmes, s
 
  - Filmes
 
+```mermaid
+ classDiagram
+ class Filmes
+  Filmes : +Guid id
+  Filmes : +String nome
+  Filmes : +String estudio
+  Filmes : +DateTime dataLancamento
+```
+
 ### Padrões de Projeto Utilizados
 
  - Repository
