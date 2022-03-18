@@ -4,7 +4,7 @@
 
 ### Status
 
-[![Awesome Tomatoes ASPNET TP03](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-dotnet-tp03%20copy.yml/badge.svg)](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-dotnet-tp03%20copy.yml)
+[![Awesome Tomatoes ASPNET TP03](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-dotnet-tp03.yml/badge.svg)](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-dotnet-tp03.yml)
 
 ### Sobre a Aplicação Awesome Tomatoes
 
