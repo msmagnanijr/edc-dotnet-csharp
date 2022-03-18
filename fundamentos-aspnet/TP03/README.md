@@ -2,6 +2,11 @@
 
 [Teste de Performance 03](https://lms.infnet.edu.br/moodle/mod/assign/view.php?id=276125)
 
+
+## Status
+
+[![A workflow to build an console application](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-csharp-tp03.yml/badge.svg)](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-csharp-tp03.yml)
+
 ### Sobre a Aplicação Awesome Tomatoes
 
 Essa aplicação foi inspirada no Rotten Tomatoes que é um website americano, agregador de críticas de cinema e televisão. O objetivo do Awesome Tomatoes é implementar
