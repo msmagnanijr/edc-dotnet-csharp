@@ -6,7 +6,6 @@
 
 [![Awesome Tomatoes ASPNET TP03](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-dotnet-tp03.yml/badge.svg)](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-dotnet-tp03.yml)
 
-
 ### Sobre a Aplicação Awesome Tomatoes
 
 Essa aplicação foi inspirada no Rotten Tomatoes que é um website americano, agregador de críticas de cinema e televisão. O objetivo do Awesome Tomatoes é implementar
