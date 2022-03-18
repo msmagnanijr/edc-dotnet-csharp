@@ -5,7 +5,7 @@
 
 ### Status
 
-[![A workflow to build an console application](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-csharp-tp03.yml/badge.svg)](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-csharp-tp03.yml)
+[![Awesome Tomatoes TP03(https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-csharp-tp03.yml/badge.svg)](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-csharp-tp03.yml)
 
 ### Sobre a Aplicação Awesome Tomatoes
 
