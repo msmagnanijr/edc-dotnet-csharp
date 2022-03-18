@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build the app
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
@@ -22,10 +22,9 @@ jobs:
         run: dotnet restore fundamentos-aspnet/TP03/solution/
 
       - name: Build
-        run: dotnet build -c release --no-restore fundamentos-aspnet/TP03/solution/
-
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v2.2.2
-        with:
-          name: GitHubActionsAwesomeTomatoes
-          path: fundamentos-aspnet/TP03/solution/*.*
+        run: dotnet build -c release --no-restore fundamentos-aspnet/TP03/solution
+#      - name: Upload a Build Artifact
+#        uses: actions/upload-artifact@v2.2.2
+#        with:
+#          name: GitHubActionsAwesomeTomatoesASPNET
+#          path: fundamentos-aspnet/TP03/solution/*.*
