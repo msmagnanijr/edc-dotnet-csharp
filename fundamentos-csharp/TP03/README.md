@@ -30,6 +30,15 @@ Atualmente a aplicação suporta dois idiomas: PT (Português) e EN (Inglês).
 
  - Movies
 
+```mermaid
+ classDiagram
+ class Movies
+  Movies : +Guid id
+  Movies : +String name
+  Movies : +String filmStudio
+  Movies : +DateTime releaseDate
+  Movies : +Double boxOffice
+```
 
 ### Teste Unitário
 
