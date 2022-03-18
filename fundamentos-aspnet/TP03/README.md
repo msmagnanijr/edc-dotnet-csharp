@@ -2,6 +2,10 @@
 
 [Teste de Performance 03](https://lms.infnet.edu.br/moodle/mod/assign/view.php?id=276125)
 
+### Status
+
+[![Awesome Tomatoes ASPNET TP03](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-dotnet-tp03%20copy.yml/badge.svg)](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-dotnet-tp03%20copy.yml)
+
 ### Sobre a Aplicação Awesome Tomatoes
 
 Essa aplicação foi inspirada no Rotten Tomatoes que é um website americano, agregador de críticas de cinema e televisão. O objetivo do Awesome Tomatoes é implementar
