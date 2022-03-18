@@ -22,7 +22,7 @@ jobs:
         run: dotnet restore fundamentos-csharp/TP03/solution/
 
       - name: Build
-        run: dotnet build -c release --no-restore
+        run: dotnet build -c release --no-restore fundamentos-csharp/TP03/solution/
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.2
