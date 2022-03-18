@@ -1,4 +1,4 @@
-name: A workflow to build an console application
+name: Awesome Tomatoes TP03
 
 on:
   push:
