@@ -60,3 +60,4 @@ NUnit está sendo utilizado para execução de testes unitários.
 
  - Command
  - Repository
+ - Factory
