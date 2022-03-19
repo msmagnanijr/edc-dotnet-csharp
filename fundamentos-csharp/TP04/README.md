@@ -53,6 +53,8 @@ NUnit está sendo utilizado para execução de testes unitários.
 
  - Colorful.Console (1.2.15)
  - NUnit (3.3.12)
+ - Microsoft.EntityFrameworkCore.SqlServer (6.0.2)
+ - Microsoft.EntityFrameworkCore.Tools (6.0.2)
 
 ### Padrões de Projeto Utilizados
 
