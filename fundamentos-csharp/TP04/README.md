@@ -5,7 +5,7 @@
 
 ### Status
 
-
+[![Awesome Tomatoes TP04](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-csharp-tp04.yml/badge.svg)](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-csharp-tp04.yml)
 
 ### Sobre a Aplicação Awesome Tomatoes
 
