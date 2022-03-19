@@ -1,4 +1,4 @@
-name: Awesome Tomatoes ASPNET TP03
+name: Awesome Tomatoes TP04
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - ".github"
       - "**/README.md"
       - "**/project-de-bloco/**"
-      - "**/fundamentos-csharp/**"
+      - "**/fundamentos-aspnet/**"
 
 jobs:
   build:
@@ -24,12 +24,12 @@ jobs:
           dotnet-version: 6.0.x
 
       - name: Restore dependencies
-        run: dotnet restore fundamentos-aspnet/TP03/solution/
+        run: dotnet restore fundamentos-csharp/TP04/solution/
 
       - name: Build
-        run: dotnet build -c release --no-restore fundamentos-aspnet/TP03/solution
-#      - name: Upload a Build Artifact
-#        uses: actions/upload-artifact@v2.2.2
-#        with:
-#          name: GitHubActionsAwesomeTomatoesASPNET
-#          path: fundamentos-aspnet/TP03/solution/*.*
+        run: dotnet build -c release --no-restore fundamentos-csharp/TP04/solution/
+  #     - name: Upload a Build Artifact
+  #       uses: actions/upload-artifact@v2.2.2
+  #       with:
+  #         name: GitHubActionsAwesomeTomatoes
+  #         path: fundamentos-csharp/TP03/solution/*.*

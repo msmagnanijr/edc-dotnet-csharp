@@ -3,6 +3,11 @@ name: Awesome Tomatoes TP03
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - ".github"
+      - "**/README.md"
+      - "**/project-de-bloco/**"
+      - "**/fundamentos-aspnet/**"
 
 jobs:
   build:

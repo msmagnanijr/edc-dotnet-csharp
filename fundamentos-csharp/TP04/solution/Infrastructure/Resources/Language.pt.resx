@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="addBoxOffice" xml:space="preserve">
+    <value>Digite a bilheteria total do filme: </value>
+  </data>
+  <data name="addMovieLabel" xml:space="preserve">
+    <value>Adicionar um Novo Filme </value>
+  </data>
+  <data name="addMovieName" xml:space="preserve">
+    <value>Digite o nome do filme que você deseja adicionar: </value>
+  </data>
+  <data name="addReleaseDate" xml:space="preserve">
+    <value>Digite a data de lançamento do filme: </value>
+  </data>
+  <data name="addStudioName" xml:space="preserve">
+    <value>Digite o nome do estúdio de cinema responsável pela produção do filme:  </value>
+  </data>
+  <data name="addSuccessMessage" xml:space="preserve">
+    <value>Cadastro realizado com sucesso!</value>
+  </data>
+  <data name="askForConfirmation" xml:space="preserve">
+    <value>Os dados abaixo estão corretos? Digite  | 1 | para Sim ou  | 2 | para Não:</value>
+  </data>
+  <data name="backMainMenu" xml:space="preserve">
+    <value>Voltando ao meuno principal...</value>
+  </data>
+  <data name="boxOfficeLabel" xml:space="preserve">
+    <value>Bilheteria: </value>
+  </data>
+  <data name="chooseMovie" xml:space="preserve">
+    <value>Selecione uma das opções abaixo para visualizar os dados do filme desejado: </value>
+  </data>
+  <data name="chooseMovieRemove" xml:space="preserve">
+    <value>Selecione uma das seguintes opções para remover:</value>
+  </data>
+  <data name="databaseChoice" xml:space="preserve">
+    <value>Por favor configure o banco de dados da aplicação. Escolha | 1 | para List, | 2 | para LinkedList ou | 3 | para File ( WIP ).</value>
+  </data>
+  <data name="databaseNotSupported" xml:space="preserve">
+    <value>não é um banco de dados válido ou suportado!</value>
+  </data>
+  <data name="deleteMovieLabel" xml:space="preserve">
+    <value>Remover um Filme</value>
+  </data>
+  <data name="errorMessage" xml:space="preserve">
+    <value>Um erro inesperado ocorreu: </value>
+  </data>
+  <data name="exitMovieLabel" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="findAllMovieLabel" xml:space="preserve">
+    <value>Listar todos os Filmes</value>
+  </data>
+  <data name="findMovieDetailsLabel" xml:space="preserve">
+    <value>Listar detalhes de um Filme</value>
+  </data>
+  <data name="languageChoice" xml:space="preserve">
+    <value>Aplicação configurada para Português!</value>
+  </data>
+  <data name="languageChoiceMessage" xml:space="preserve">
+    <value>Por favor configure o idioma da aplicação. Escolha | PT | para Português ou | EN | para Inglês.</value>
+  </data>
+  <data name="languageNotSupported" xml:space="preserve">
+    <value>não é um idioma válido ou suportado!</value>
+  </data>
+  <data name="messageFile" xml:space="preserve">
+    <value>A aplicação foi configurada para usar o tipo File como banco de dados.</value>
+  </data>
+  <data name="messageLinkedList" xml:space="preserve">
+    <value>A aplicação foi configurada para usar o tipo LinkedList como banco de dados.</value>
+  </data>
+  <data name="messageList" xml:space="preserve">
+    <value>A aplicação foi configurada para usar o tipo List como banco de dados.</value>
+  </data>
+  <data name="moreMovieInfo" xml:space="preserve">
+    <value>para receber mais informações sobre o filme </value>
+  </data>
+  <data name="movieDetails" xml:space="preserve">
+    <value>Detalhes do Filme</value>
+  </data>
+  <data name="movieListLabel" xml:space="preserve">
+    <value>Lista de Filmes</value>
+  </data>
+  <data name="movieToFind" xml:space="preserve">
+    <value>Digite o nome, ou parte do nome do filme que deseja encontrar: </value>
+  </data>
+  <data name="movieToRemove" xml:space="preserve">
+    <value>Digite o nome, ou parte do nome do filme que deseja remover:</value>
+  </data>
+  <data name="nameLabel" xml:space="preserve">
+    <value>Nome: </value>
+  </data>
+  <data name="noLabel" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="releaseDateLabel" xml:space="preserve">
+    <value>Data de lançamento: </value>
+  </data>
+  <data name="removeMovieMessage" xml:space="preserve">
+    <value>para remover o filme </value>
+  </data>
+  <data name="selectIdMovie" xml:space="preserve">
+    <value>Selecione o Id </value>
+  </data>
+  <data name="studioLabel" xml:space="preserve">
+    <value>Estúdio reponsável: </value>
+  </data>
+  <data name="textMovieDetailsBoxOffice" xml:space="preserve">
+    <value>A Bilheteria total foi de</value>
+  </data>
+  <data name="textMovieDetailsFilmeStudio" xml:space="preserve">
+    <value>O Estúdio</value>
+  </data>
+  <data name="textMovieDetailsRelease" xml:space="preserve">
+    <value>foi lançado em</value>
+  </data>
+  <data name="textMovieDetailsReleaseCalc" xml:space="preserve">
+    <value>O filme foi lançado a</value>
+  </data>
+  <data name="textMovieDetailsReleaseDays" xml:space="preserve">
+    <value>dias atrás ou</value>
+  </data>
+  <data name="textMovieDetailsReleaseYears" xml:space="preserve">
+    <value>anos</value>
+  </data>
+  <data name="textMovieDetailsReponsable" xml:space="preserve">
+    <value>foi reponsável pela produção do filme</value>
+  </data>
+  <data name="whatToDo" xml:space="preserve">
+    <value>O que você deseja fazer?</value>
+  </data>
+  <data name="yesLabel" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+</root>
