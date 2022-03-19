@@ -21,7 +21,7 @@ Atualmente a aplicação suporta dois idiomas: PT (Português) e EN (Inglês).
 ![](images/app.gif)
 
 
-Nesse momento a aplicação suporta 3 tipos de "Banco de Dados": Arquivos, List e LinkedList, bastando o usuário escolher ao iniciar a aplicação.
+Nesse momento a aplicação suporta 3 tipos de "Banco de Dados": Arquivos (WIP), List e LinkedList, bastando o usuário escolher ao iniciar a aplicação.
 
 ### Funcionalidades Implementadas até o Momento
 
