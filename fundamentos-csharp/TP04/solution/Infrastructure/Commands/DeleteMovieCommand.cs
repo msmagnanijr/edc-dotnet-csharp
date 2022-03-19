@@ -59,7 +59,7 @@ namespace Infrastructure.Commands
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Um erro inesperado ocorreu: {0}", ex.Message);
+                Console.WriteLine("{0} {1}", Language.errorMessage, ex.Message);
             }
         }
     }
