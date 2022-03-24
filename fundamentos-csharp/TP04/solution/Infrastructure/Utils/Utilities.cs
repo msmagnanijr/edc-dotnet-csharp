@@ -57,7 +57,7 @@ public static class Utilities
 
     }
 
-    public static void RemoveLineFromFile(String fileName, string id) 
+    public static void RemoveLineFromFile(String fileName, string id)
     {
         string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         List<string> lines = File.ReadAllLines(Path.Combine(docPath, fileName)).ToList();

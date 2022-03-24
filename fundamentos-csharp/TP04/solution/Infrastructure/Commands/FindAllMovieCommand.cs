@@ -19,8 +19,9 @@ namespace Infrastructure.Commands
             {
                 var operations = MovieRepositoryFactory.Create(database);
                 var movies = operations.GetAll();
-                Console.WriteLine("\n--- {0} ---\n", Language.movieListLabel, Color.Aquamarine);                
-                foreach(Movies movie in movies) {
+                Console.WriteLine("\n--- {0} ---\n", Language.movieListLabel, Color.Aquamarine);
+                foreach (Movies movie in movies)
+                {
                     Console.WriteLine($"\n{Language.nameLabel} {movie.Name}");
                     Console.WriteLine($"{Language.studioLabel} {movie.FilmStudio}");
                 }

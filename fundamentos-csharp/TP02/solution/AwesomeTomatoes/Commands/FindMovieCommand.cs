@@ -56,7 +56,6 @@ namespace AwesomeTomatoes.Commands
                     return;
                 }
                 else Console.WriteLine("Nenhum resultado encontrado! Retornando ao menu principal."); return;
-                
             }
             catch (Exception ex)
             {
