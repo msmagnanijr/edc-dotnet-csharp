@@ -1,0 +1,35 @@
+name: Awesome Tomatoes TP04
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - ".github"
+      - "**/README.md"
+      - "**/project-de-bloco/**"
+      - "**/fundamentos-aspnet/**"
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore fundamentos-csharp/AT/solution/
+
+      - name: Build
+        run: dotnet build -c release --no-restore fundamentos-csharp/AT/solution/
+  #     - name: Upload a Build Artifact
+  #       uses: actions/upload-artifact@v2.2.2
+  #       with:
+  #         name: GitHubActionsAwesomeTomatoes
+  #         path: fundamentos-csharp/TP03/solution/*.*
