@@ -4,6 +4,7 @@
 
 ### Status
 
+[![Awesome Tomatoes ASPNET AT](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-dotnet-at.yml/badge.svg)](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-dotnet-at.yml)
 
 ### Sobre a Aplicação Awesome Tomatoes
 
