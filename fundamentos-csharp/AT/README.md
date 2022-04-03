@@ -13,7 +13,7 @@ o tema do projeto de bloco que nesse caso é um agregador de reviews ( filmes, s
 
 ### Internacionalização
 
-Atualmente a aplicação suporta dois idiomas: PT (Português) e EN (Inglês).
+A aplicação suporta dois idiomas: PT (Português) e EN (Inglês).
 
 ### Exemplo de Execução da Aplicação
 
