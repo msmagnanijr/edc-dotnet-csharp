@@ -1,0 +1,43 @@
+﻿@model WebAwesomeTomatoes.Models.Movie
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="text-white">Remover Filme</h1>
+
+<h3 class="text-white">Você realmente deseja remover esse filme?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+              <label class="text-white"> @Html.DisplayNameFor(model => model.Name) </label>
+        </dt>
+        <dd class = "col-sm-10">
+              <label class="text-white"> @Html.DisplayFor(model => model.Name) </label>
+        </dd>
+        <dt class = "col-sm-2">
+              <label class="text-white"> @Html.DisplayNameFor(model => model.FilmStudio) </label>
+        </dt>
+        <dd class = "col-sm-10">
+              <label class="text-white"> @Html.DisplayFor(model => model.FilmStudio) </label>
+        </dd>
+        <dt class = "col-sm-2">
+              <label class="text-white"> @Html.DisplayNameFor(model => model.ReleaseDate) </label>
+        </dt>
+        <dd class = "col-sm-10">
+              <label class="text-white"> @Html.DisplayFor(model => model.ReleaseDate) </label>
+        </dd>
+        <dt class = "col-sm-2">
+              <label class="text-white"> @Html.DisplayNameFor(model => model.BoxOffice) </label>
+        </dt>
+        <dd class = "col-sm-10">
+              <label class="text-white">R$ @Html.DisplayFor(model => model.BoxOffice) </label>
+        </dd>
+    </dl>
+    <br />
+    <form asp-action="Delete">
+        <input type="submit" value="Remover" class="btn btn-danger" />
+        <a asp-action="Index"  class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

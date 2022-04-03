@@ -1,0 +1,65 @@
+﻿@model IEnumerable<WebAwesomeTomatoes.Models.Movie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-white">Lista de Filmes</h1>
+<br />
+<p>
+    <a asp-action="Create" class="btn btn-dark">Adicionar um Novo Filme</a>
+</p>
+<br />
+ <div class="col-md-4">
+<form asp-action="Index">
+    <p>
+        <input class="form-control"  type="text" name="filter" placeholder="Digite o nome do Filme para filtrar as ocorrências"/>
+        <br />
+        <input type="submit" value="Filtrar" class="btn btn-secondary"/>
+    </p>
+</form>
+</div>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label class="text-white"> @Html.DisplayNameFor(model => model.Name)  </label>
+            </th>
+            <th>
+               <label class="text-white">  @Html.DisplayNameFor(model => model.FilmStudio)  </label>
+            </th>
+            <th>
+                <label class="text-white"> @Html.DisplayNameFor(model => model.ReleaseDate)  </label>
+            </th>
+            <th>
+                <label class="text-white"> @Html.DisplayNameFor(model => model.BoxOffice)  </label>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+               <label class="text-white"> @Html.DisplayFor(modelItem => item.Name) </label>
+            </td>
+            <td>
+               <label class="text-white">  @Html.DisplayFor(modelItem => item.FilmStudio)  </label>
+            </td>
+            <td>
+               <label class="text-white"> @Html.DisplayFor(modelItem => item.ReleaseDate)  </label>
+            </td>
+            <td>
+               <label class="text-white">  R$ @Html.DisplayFor(modelItem => item.BoxOffice)  </label>
+            </td>
+            <td>
+                @Html.ActionLink("Atualizar", "Edit", new { id=item.Id }, new { @class = "btn btn-success"}) 
+                @Html.ActionLink("Detalhes", "Details", new {id=item.Id }, new { @class = "btn btn-secondary"})
+                @Html.ActionLink("Remover", "Delete", new { id=item.Id }, new { @class = "btn btn-danger"})
+            </td>
+
+        </tr>
+}
+    </tbody>
+</table>

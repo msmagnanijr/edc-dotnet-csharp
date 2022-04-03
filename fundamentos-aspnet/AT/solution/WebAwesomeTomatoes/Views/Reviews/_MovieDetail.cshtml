@@ -1,0 +1,40 @@
+﻿@model WebAwesomeTomatoes.Models.Review
+@{
+    var movie = new WebAwesomeTomatoes.Models.Movie();
+
+    if (Model.Movie != null)
+    {
+        movie = Model.Movie;
+    }
+}
+<div>
+    <h4  class="text-white">Informações Detalhadas sobre o Filme</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label  class="text-white">Nome</label>
+        </dt>
+        <dd class="col-sm-10">
+            <label  class="text-white">@movie.Name</label>
+        </dd>
+                <dt class="col-sm-2">
+            <label  class="text-white">Estúdio Resposável</label>
+        </dt>
+        <dd class="col-sm-10">
+            <label  class="text-white">@movie.FilmStudio</label>
+        </dd>
+
+        <dt class="col-sm-2">
+            <label  class="text-white">Data de Lançamento</label>
+        </dt>
+        <dd class="col-sm-10">
+            <label  class="text-white">@movie.ReleaseDate</label>
+        </dd>
+        <dt class="col-sm-2">
+            <label  class="text-white">Bilheteria</label>
+        </dt>
+        <dd class="col-sm-10">
+            <label  class="text-white">@movie.BoxOffice</label>
+        </dd>
+    </dl>
+</div>

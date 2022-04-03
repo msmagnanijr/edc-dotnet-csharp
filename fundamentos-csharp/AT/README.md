@@ -1,4 +1,4 @@
-## Fundamentos de Desenvolvimento com C# - Assessment (WIP)
+## Fundamentos de Desenvolvimento com C# - Assessment
 
 [Assessment](https://lms.infnet.edu.br/moodle/mod/assign/view.php?id=276211)
 

@@ -1,0 +1,50 @@
+﻿@model WebAwesomeTomatoes.Models.Review
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="text-white">Detalhes da Avaliação</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+             <label class="text-white"> @Html.DisplayNameFor(model => model.TextReview)  </label>
+        </dt>
+        <dd class = "col-sm-10">
+             <label class="text-white"> @Html.DisplayFor(model => model.TextReview)  </label>
+        </dd>
+        <dt class = "col-sm-2">
+             <label class="text-white"> @Html.DisplayNameFor(model => model.Score)  </label>
+        </dt>
+        <dd class = "col-sm-10">
+             <label class="text-white"> @Html.DisplayFor(model => model.Score)  </label>
+        </dd>
+        <dt class = "col-sm-2">
+             <label class="text-white"> @Html.DisplayNameFor(model => model.ReviewDate)  </label>
+        </dt>
+        <dd class = "col-sm-10">
+             <label class="text-white"> @Html.DisplayFor(model => model.ReviewDate)  </label>
+        </dd>
+        <dt class = "col-sm-2">
+             <label class="text-white"> @Html.DisplayNameFor(model => model.Movie)  </label>
+        </dt>
+        <dd class = "col-sm-10">
+             <label class="text-white"> @Html.DisplayFor(model => model.Movie.Name)  </label>
+        </dd>
+    </dl>
+</div>
+<br />
+<div name="MovieInfo" class = "row">
+    <div class = "col-sm-3"></div>
+    <div class = "col-sm-6">
+        @Html.Partial("_MovieDetail.cshtml")
+    </div>
+    <div class = "col-sm-3"></div>
+</div>
+
+<div>
+    @Html.ActionLink("Atualizar", "Edit", new {  id = Model.Id }, new { @class = "btn btn-primary"})
+    <a asp-action="Index"   class="btn btn-secondary">Voltar</a>
+</div>

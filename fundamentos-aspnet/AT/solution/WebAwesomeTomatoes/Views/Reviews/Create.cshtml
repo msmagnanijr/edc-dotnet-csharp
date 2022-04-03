@@ -1,0 +1,50 @@
+﻿@model WebAwesomeTomatoes.Models.Review
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1  class="text-white">Adicionar uma Nova Avaliação</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TextReview" class="text-white"></label>
+                <input asp-for="TextReview" class="form-control"  placeholder="Escreva a sua avaliação"/>
+                <span asp-validation-for="TextReview" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Score" class="text-white"></label>
+                <input asp-for="Score" class="form-control" placeholder="Escolha a sua nota"/>
+                <span asp-validation-for="Score" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="ReviewDate" class="text-white"></label>
+                <input asp-for="ReviewDate" class="form-control" />
+                <span asp-validation-for="ReviewDate" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="MovieId" class="text-white"></label>
+                <select asp-for="MovieId" class ="form-control" asp-items="ViewBag.MovieId">
+                    <option value="">Selecione um Filme</option>
+                </select>
+            </div>
+            <br />
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
