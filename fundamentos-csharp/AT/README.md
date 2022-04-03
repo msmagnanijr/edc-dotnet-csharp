@@ -17,14 +17,17 @@ Atualmente a aplicação suporta dois idiomas: PT (Português) e EN (Inglês).
 
 ### Exemplo de Execução da Aplicação
 
+![](images/app.gif)
 
-Nesse momento a aplicação suporta 4 tipos de "Banco de Dados": Arquivos, List, LinkedList e Banco de Dados (SQL Server), bastando o usuário escolher ao iniciar a aplicação.
+
+A aplicação suporta 4 tipos de "Banco de Dados": Arquivos, List, LinkedList e Banco de Dados (SQL Server), bastando o usuário escolher ao iniciar a aplicação.
 
 ### Funcionalidades Implementadas até o Momento
 
  - Adicionar um novo Filme
  - Listar todos os Filmes
  - Listar detalhes de um Filme
+ - Atualizar Informações de um Filme
  - Remover um Filme
 
 ### Entidades Mapeadas até o Momento
