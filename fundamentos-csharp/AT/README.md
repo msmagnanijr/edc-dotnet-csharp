@@ -2,9 +2,9 @@
 
 [Assessment](https://lms.infnet.edu.br/moodle/mod/assign/view.php?id=276211)
 
-
 ### Status
 
+[![Awesome Tomatoes C# AT](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-csharp-at.yml/badge.svg)](https://github.com/msmagnanijr/csharp-mauricio-magnani/actions/workflows/build-csharp-at.yml)
 
 ### Sobre a Aplicação Awesome Tomatoes
 
