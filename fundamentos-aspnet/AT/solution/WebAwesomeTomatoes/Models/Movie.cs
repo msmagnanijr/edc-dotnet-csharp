@@ -16,11 +16,11 @@ public class Movie
     [DataType(DataType.Date)]
     [Display(Name = "Data de Lançamento")]
     [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
-    public DateTime ReleaseDate { get; set; }
+    public DateTime? ReleaseDate { get; set; }
 
     [Required(ErrorMessage = "Por favor digite o valor da Bilheteria em milhões!")]
     [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:F2}")]
     [Display(Name = "Bilheteria")]
-    public decimal BoxOffice { get; set; }
+    public decimal? BoxOffice { get; set; }
     public ICollection<Review>? Reviews { get; set; }
 }

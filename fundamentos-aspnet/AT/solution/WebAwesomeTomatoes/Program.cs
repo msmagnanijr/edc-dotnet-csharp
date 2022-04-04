@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WebAwesomeTomatoes.Models;
+using WebAwesomeTomatoes.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,9 @@ builder.Services.AddControllersWithViews();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<EFContext>(options =>
                 options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
 
 var app = builder.Build();
 

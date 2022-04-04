@@ -1,123 +1,73 @@
-﻿#nullable disable
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebAwesomeTomatoes.Models;
+using WebAwesomeTomatoes.Repositories;
 
 namespace WebAwesomeTomatoes.Controllers
 {
     public class MoviesController : Controller
     {
-        private readonly EFContext _context;
+        private readonly IMovieRepository _movieRepository;
 
-        public MoviesController(EFContext context)
+        public MoviesController(IMovieRepository movieRepository)
         {
-            _context = context;
+            _movieRepository = movieRepository;
         }
-
-        // GET: Movies
-
         public async Task<IActionResult> Index(string filter)
         {
-            if (!string.IsNullOrEmpty(filter))
-            {
-                var eFContext =  _context.Movies
-                    .Where(m => m.Name.StartsWith(filter) || m.Name.Contains(filter))
-                    .AsNoTracking()
-                    .OrderByDescending(m => m.ReleaseDate);
-
-                return View(await eFContext.ToListAsync());
-            }
-            else
-            {
-                return View(await _context.Movies.AsNoTracking().OrderByDescending(m => m.ReleaseDate).ToListAsync());
-            }
+            if (!string.IsNullOrEmpty(filter)) return View(await _movieRepository.GetByFilter(filter));
+            return View(await _movieRepository.GetAll());
         }
 
-        // GET: Movies/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var movie = await _context.Movies
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (movie == null)
-            {
-                return NotFound();
-            }
-
+            var movie = await _movieRepository.GetById(id);
+            if (movie == null) return NotFound();
             return View(movie);
         }
-
-        // GET: Movies/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Movies/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,FilmStudio,ReleaseDate,BoxOffice")] Movie movie)
+        public async Task<IActionResult> Create(Movie movie)
         {
             var errors = ModelState.Values.SelectMany(v => v.Errors.Select(z => z.Exception));
             Console.Write(errors);
             if (ModelState.IsValid)
             {
-                _context.Add(movie);
-                await _context.SaveChangesAsync();
+                if (_movieRepository.EntityExists(movie.Id)) return BadRequest("Esse filme já existe.");
+                await _movieRepository.Create(movie);
+                await _movieRepository.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(movie);
         }
 
-        // GET: Movies/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var movie = await _context.Movies.FindAsync(id);
-            if (movie == null)
-            {
-                return NotFound();
-            }
+            var movie = await _movieRepository.GetById(id);
+            if (movie == null) return NotFound();
             return View(movie);
         }
 
-        // POST: Movies/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,FilmStudio,ReleaseDate,BoxOffice")] Movie movie)
+        public async Task<IActionResult> Edit(int id, Movie movie)
         {
-            if (id != movie.Id)
-            {
-                return NotFound();
-            }
-
+            if (id != movie.Id) return NotFound();
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(movie);
-                    await _context.SaveChangesAsync();
+                    await _movieRepository.Update(movie);
+                    await _movieRepository.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!MovieExists(movie.Id))
+                    if (!_movieRepository.EntityExists(movie.Id))
                     {
                         return NotFound();
                     }
@@ -130,39 +80,21 @@ namespace WebAwesomeTomatoes.Controllers
             }
             return View(movie);
         }
-
-        // GET: Movies/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var movie = await _context.Movies
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (movie == null)
-            {
-                return NotFound();
-            }
-
+            var movie = await _movieRepository.GetById(id);
+            if (movie == null) return NotFound();
             return View(movie);
         }
 
-        // POST: Movies/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var movie = await _context.Movies.FindAsync(id);
-            _context.Movies.Remove(movie);
-            await _context.SaveChangesAsync();
+            var movie = await _movieRepository.GetById(id);
+            await _movieRepository.Delete(movie);
+            await _movieRepository.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool MovieExists(int id)
-        {
-            return _context.Movies.Any(e => e.Id == id);
         }
     }
 }
