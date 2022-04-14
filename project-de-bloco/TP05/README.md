@@ -8,9 +8,6 @@
 
 ### Diagrama de Camadas - Awesome Tomatoes
 
-[]: # Language: markdown
-[]: # Path: project-de-bloco/TP05/README.md
-
 ```mermaid
 %%{init:{"theme":"neutral"}}%%
 flowchart TB
@@ -32,9 +29,6 @@ flowchart TB
 ```
 
 ### Diagrama de Componentes - Awesome Tomatoes
-
-[]: # Language: markdown
-[]: # Path: project-de-bloco/TP05/README.md
 
 ```mermaid
 %%{init:{"theme":"neutral"}}%%
