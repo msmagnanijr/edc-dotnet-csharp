@@ -6,7 +6,10 @@
 
 
 
-### Diagrama de Camadas
+### Diagrama de Camadas - Awesome Tomatoes
+
+[]: # Language: markdown
+[]: # Path: project-de-bloco/TP05/README.md
 
 ```mermaid
 %%{init:{"theme":"neutral"}}%%
@@ -15,15 +18,40 @@ flowchart TB
   Presentation --> Bussiness --> Data
 
   subgraph Presentation [Presentation Tier]
-    A(Controller) <--> B[ View Model]
+    A(Razor Pages) <--> B[ ASP .NET MVC Controllers]
   end
 
   subgraph Bussiness [Business Logic Tier]
-    C[Services] <--> D[Data Transfer Object] <--> E[Interace]
+    C[ASP .NET MVC Services] <--> D[ASP .NET MVC Data Transfer Object] <--> E[ASP .NET MVC Interace]
   end
 
   subgraph Data [Data Access Tier]
-    G[Repository] <--> F[Mapping]
+    G[Entity Framework] <--> F[ MS SQL Server]
+  end
+
+```
+
+### Diagrama de Componentes - Awesome Tomatoes
+
+[]: # Language: markdown
+[]: # Path: project-de-bloco/TP05/README.md
+
+```mermaid
+%%{init:{"theme":"neutral"}}%%
+flowchart TB
+
+  Presentation --> Bussiness --> Data
+
+  subgraph Presentation [Presentation Tier]
+    A(Details.cshtml Index.cshtml ) <--> B[ MoviesController.cs]
+  end
+
+  subgraph Bussiness [Business Logic Tier]
+    C[MovieFactory.cs] <--> D[MovieRepository.cs] <--> E[IMovieRepository.cs]
+  end
+
+  subgraph Data [Data Access Tier]
+    G[Movie.cs] <--> F[EFContext.cs]
   end
 
 ```
