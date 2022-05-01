@@ -6,7 +6,7 @@
 
 ### URL da Aplicação
 
-[Cloud Concetps](https://cloudconcepts20220501122728.azurewebsites.net/)
+[Cloud Concepts](https://cloudconcepts20220501122728.azurewebsites.net/)
 
 ![](images/app.png)
 
