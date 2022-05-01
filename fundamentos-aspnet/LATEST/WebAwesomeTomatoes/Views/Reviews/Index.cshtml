@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Domain.Models.Review>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center mt-4">Lista de Avaliações de Filmes</h1>
+<br />
+<p>
+    <a asp-action="Create" class="btn btn-dark">Adicionar uma Nova Avaliação</a>
+</p>
+
+<br />
+<div class="col-md-4">
+    <form asp-action="Index">
+        <p>
+            <input class="form-control shadow"  type="text" name="filter" placeholder="Digite o nome do Filme para filtrar as Avaliações"/>
+            <br />
+            <input type="submit" value="Filtrar" class="btn btn-dark"/>
+        </p>
+    </form>
+</div>
+<br />
+<br />
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">
+                 <label class="text-white"> @Html.DisplayNameFor(model => model.TextReview) </label>
+            </th>
+            <th scope="col">
+                <label class="text-white"> @Html.DisplayNameFor(model => model.Score) </label>
+            </th>
+            <th scope="col">
+                 <label class="text-white"> @Html.DisplayNameFor(model => model.ReviewDate) </label>
+            </th>
+            <th scope="col">
+                <label class="text-white"> @Html.DisplayNameFor(model => model.Movie) </label>
+            </th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                 <label> @Html.DisplayFor(modelItem => item.TextReview) </label>
+            </td>
+            <td>
+                 <label> @Html.DisplayFor(modelItem => item.Score) </label>
+            </td>
+            <td>
+                 <label> @Html.DisplayFor(modelItem => item.ReviewDate) </label>
+            </td>
+            <td>
+                 <label> @Html.DisplayFor(modelItem => item.Movie.Name) </label>
+            </td>
+            <td>
+                @Html.ActionLink("Atualizar", "Edit", new { id=item.Id }, new { @class = "btn btn-outline-success"})
+            </td>
+            <td>
+                @Html.ActionLink("Detalhes", "Details", new {id=item.Id }, new { @class = "btn btn-outline-secondary"})
+            </td>
+            <td>
+                @Html.ActionLink("Remover", "Delete", new { id=item.Id }, new { @class = "btn btn-outline-danger"})
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

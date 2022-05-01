@@ -1,0 +1,52 @@
+﻿@model Domain.Models.Review
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container">
+    <div class="row justify-content-md-center">
+
+         <h1 class="text-center mt-4">Remover Avaliação</h1>
+
+        <h3 class="text-center mt-2">Você realmente deseja remover essa avaliação?</h3>
+        <div class="card border-dark mb-5 shadow-sm rounded" style="max-width: 50rem;">
+            <div class="col-8 mt-4">
+                <dl class="row">
+                    <dt class = "col-sm-4">
+                          <label> @Html.DisplayNameFor(model => model.TextReview) </label>
+                    </dt>
+                    <dd class = "col-sm-8">
+                          <label> @Html.DisplayFor(model => model.TextReview) </label>
+                    </dd>
+                    <dt class = "col-sm-4">
+                          <label> @Html.DisplayNameFor(model => model.Score) </label>
+                    </dt>
+                    <dd class = "col-sm-8">
+                          <label> @Html.DisplayFor(model => model.Score) </label>
+                    </dd>
+                    <dt class = "col-sm-4">
+                          <label> @Html.DisplayNameFor(model => model.ReviewDate) </label>
+                    </dt>
+                    <dd class = "col-sm-8">
+                          <label> @Html.DisplayFor(model => model.ReviewDate) </label>
+                    </dd>
+                    <dt class = "col-sm-4">
+                          <label> @Html.DisplayNameFor(model => model.Movie) </label>
+                    </dt>
+                    <dd class = "col-sm-8">
+                          <label> @Html.DisplayFor(model => model.Movie.Name) </label>
+                    </dd>
+                </dl>
+                <br />
+                <div class="mb-3">            
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Remover" class="btn btn-outline-danger" />
+                        <a asp-action="Index"  class="btn btn-outline-secondary">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
