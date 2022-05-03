@@ -1,0 +1,40 @@
+﻿@model Domain.Models.Review
+@{
+    var movie = new Domain.Models.Movie();
+
+    if (Model.Movie != null)
+    {
+        movie = Model.Movie;
+    }
+}
+<div>
+    <h4 class="text-center mt-2">Informações Sobre o Filme</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-4">
+            <label>Nome</label>
+        </dt>
+        <dd class="col-sm-8">
+            <label>@movie.Name</label>
+        </dd>
+         <dt class="col-sm-4">
+            <label>Estúdio</label>
+        </dt>
+        <dd class="col-sm-8">
+            <label>@movie.FilmStudio</label>
+        </dd>
+
+        <dt class="col-sm-4">
+            <label>Data de Lançamento</label>
+        </dt>
+        <dd class="col-sm-8">
+            <label>@movie.ReleaseDate</label>
+        </dd>
+        <dt class="col-sm-4">
+            <label>Bilheteria</label>
+        </dt>
+        <dd class="col-sm-8">
+            <label>@movie.BoxOffice</label>
+        </dd>
+    </dl>
+</div>
