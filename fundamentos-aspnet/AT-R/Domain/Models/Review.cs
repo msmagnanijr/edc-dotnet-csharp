@@ -12,6 +12,7 @@ public class Review
 
     [Display(Name = "Nota")]
     [Required(ErrorMessage = "Por favor digite a nota do Filme!")]
+    [Range(0,5)]
     public int Score { get; set; }
 
     [DataType(DataType.Date)]
