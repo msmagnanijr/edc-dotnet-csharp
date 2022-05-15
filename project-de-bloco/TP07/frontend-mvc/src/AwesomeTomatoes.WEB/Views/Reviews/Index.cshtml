@@ -1,0 +1,31 @@
+﻿@model IEnumerable<AwesomeTomatoes.WEB.Models.Review>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center mt-4 text-white">Lista de Avaliações de Filmes</h1>
+<br />
+@foreach (var item in Model) {
+    <div class="card border-primary hvr-bounce-in text-center bg-light shadow-lg rounded">
+      <div class="card-header">
+            @for (var i = 0; i <  item.ReviwerSatisfaction; i++)
+            {
+                <i class="fas fa-star fa-xs"></i>
+            }
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"> <i class="fa-solid fa-film"></i> @Html.DisplayFor(modelItem => item.Movie.Name)</h5>
+        <p class="card-text">@Html.DisplayFor(modelItem => item.TextReview)</p>
+
+        @Html.ActionLink("Atualizar", "Edit", new { id=item.Id }, new { @class = "btn btn-outline-success btn-sm"})
+        @Html.ActionLink("Detalhes", "Details", new {id=item.Id }, new { @class = "btn btn-outline-secondary btn-sm"})
+        @Html.ActionLink("Remover", "Delete", new { id=item.Id }, new { @class = "btn btn-outline-danger btn-sm"})
+      </div>
+      <div class="card-footer text-muted">
+            @Html.DisplayFor(modelItem => item.ReviewDate)
+      </div>
+    </div>
+    <p />
+    <p />
+}
