@@ -6,4 +6,4 @@
 
 ### Exemplo de Execução da Aplicação
 
-![](images/app.png)
+![](images/app.gif)
