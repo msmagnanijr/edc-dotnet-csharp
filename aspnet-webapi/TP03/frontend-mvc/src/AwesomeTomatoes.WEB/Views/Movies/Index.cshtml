@@ -1,0 +1,40 @@
+﻿@model IEnumerable<AwesomeTomatoes.WEB.Models.Movie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center mt-4 text-white">Lista de Filmes</h1>
+<p />
+<div class="row mb-3">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-4 mb-3">
+
+                <div class="card border-primary h-100 mb-3 bg-light shadow-lg rounded animate__animated animate__bounceIn animate__slow" style="width:18rem;">
+
+                    <img class="card-img-top img-fluid hvr-bounce-in" src="@Url.Content(@item.MovieBlobUrl)" alt="">
+
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <i class="fa-solid fa-film"></i> @Html.DisplayFor(modelItem => item.Name)
+                        </h4>
+                        <p class="card-text">
+                            <i class="fa-solid fa-calendar-days"></i> @Html.DisplayFor(modelItem => item.ReleaseDate)
+                        </p>
+                        <p class="card-text">
+                             <i class="fa-solid fa-building"></i> @Html.DisplayFor(modelItem => item.FilmStudio)
+                        </p>
+                    </div>
+
+                    <div class="card-footer">
+                        @Html.ActionLink("Atualizar", "Edit", new { id=item.Id }, new { @class = "btn btn-outline-success btn-sm hvr-grow"}) 
+                        @Html.ActionLink("Detalhes", "Details", new {id=item.Id }, new { @class = "btn btn-outline-warning btn-sm hvr-grow"})
+                        @Html.ActionLink("Remover", "Delete", new { id=item.Id }, new { @class = "btn btn-outline-danger btn-sm hvr-grow"})
+                    </div>
+
+                </div>
+
+            </div>
+        }
+</div>
