@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Domain.Model.Entities.MovieEntity>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    .card-img-top {
+    width: 100%;
+    height: 18vw;
+    object-fit: cover;
+    }
+</style>
+
+@if(Model.Any()){
+
+<h1 class="text-center mt-4 text-white">Lista de Filmes</h1>
+<p />
+<div class="row mb-3">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-3 mb-3">
+
+                <div class="card border-white h-100 mb-3 shadow-lg rounded animate__animated animate__bounceIn animate__slow" style="width:20rem; background-color: Lavender;">
+
+                    <img class="card-img-top img-fluid hvr-bounce-in" src="@Url.Content(@item.ImageUrl)" alt="">
+
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <i class="fa-solid fa-film" style="color: black"></i> <strong>@Html.DisplayFor(modelItem => item.Name)</strong>
+                        </h4>
+                        <p class="card-text">
+                            <i class="fa-solid fa-calendar-days" style="color: black"></i> @Html.DisplayFor(modelItem => item.ReleaseDate) ( <timeago date=(item.ReleaseDate)></timeago> )
+                        </p>
+                        <p class="card-text">
+                             <i class="fa-solid fa-building" style="color: black"></i> @Html.DisplayFor(modelItem => item.FilmStudio)
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="card-footer col text-center">
+                            @Html.ActionLink("", "Edit", new { id=item.Id }, new { @class = "fas fa-pen fa-lg me-3 hvr-grow" , @style = "color:LimeGreen; text-decoration:none;", @title ="Atualizar"}) 
+                            @Html.ActionLink("", "Details", new {id=item.Id }, new { @class = "fas fa-plus fa-lg ms-3 me-3 hvr-grow", @style = "color:DeepSkyBlue; text-decoration:none;", @title ="Detalhes"})
+                            @Html.ActionLink("", "Delete", new { id=item.Id }, new { @class = "fas fa-trash fa-lg ms-3 hvr-grow" , @style = "color:FireBrick; text-decoration:none;", @title ="Remover"})
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+</div>
+}
+else
+{
+<h1 class="text-center mt-4 text-white">Ainda não existem Filmes cadastrados ¯\_(ツ)_/¯ </h1>
+}
