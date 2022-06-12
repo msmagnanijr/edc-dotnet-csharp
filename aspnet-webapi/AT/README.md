@@ -17,6 +17,6 @@ Essa aplicação foi inspirada no Rotten Tomatoes que é um website americano, a
 
 ### Projeto FunctionApp ( Ignorar para esse AT)
 
-**Observação:** Esse projeto representa a unificação das "cadeiras" desse semestre portando possui algumas funcionalidades que não foram solicitadas nesse AT, sendo assim podem ser seguramente ignoradas.
+**Observação:** Esse projeto representa a unificação das "cadeiras" desse semestre portanto possui algumas funcionalidades que não foram solicitadas nesse AT, sendo assim podem ser seguramente ignoradas.
 
 Na página de detalhe estão implementados dois campos referentes ao uso da Azure Functions. O campo "Último Acesso Síncrono" na página de detalhes do filme se refere a execução da Function1 e o campo "Último Acesso Assíncrono" se refere a execução da Queue Function2.
