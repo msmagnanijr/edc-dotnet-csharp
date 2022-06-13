@@ -1,0 +1,57 @@
+﻿@model Domain.Model.Entities.MovieEntity
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container">
+    <div class="row justify-content-md-center">
+
+        <h1 class="text-center mt-4 text-white">Remover Filme</h1>
+
+        <h3 class="text-center mt-2 text-white">Você realmente deseja remover esse filme?</h3>
+        <div class="card border-dark mb-5 shadow-sm rounded" style="max-width: 50rem;">
+            <div class="col-8 mt-4">
+                <dl class="row">
+                    <dt class = "col-sm-4">
+                          <label> @Html.DisplayNameFor(model => model.Name) </label>
+                    </dt>
+                    <dd class = "col-sm-8">
+                          <label> @Html.DisplayFor(model => model.Name) </label>
+                    </dd>
+                    <dt class = "col-sm-4">
+                          <label> @Html.DisplayNameFor(model => model.FilmStudio) </label>
+                    </dt>
+                    <dd class = "col-sm-8">
+                          <label> @Html.DisplayFor(model => model.FilmStudio) </label>
+                    </dd>
+                    <dt class = "col-sm-4">
+                          <label> @Html.DisplayNameFor(model => model.ReleaseDate) </label>
+                    </dt>
+                    <dd class = "col-sm-8">
+                          <label> @Html.DisplayFor(model => model.ReleaseDate) </label>
+                    </dd>
+                    <dt class = "col-sm-4">
+                          <label> @Html.DisplayNameFor(model => model.BoxOffice) </label>
+                    </dt>
+                    <dd class = "col-sm-8">
+                          <label>R$ @Html.DisplayFor(model => model.BoxOffice) </label>
+                    </dd>
+                    <dt class = "col-sm-4">
+                          <label> @Html.DisplayNameFor(model => model.VideoUrl) </label>
+                    </dt>
+                    <dd class = "col-sm-8">
+                          <label>@Html.DisplayFor(model => model.VideoUrl) </label>
+                    </dd>
+                </dl>
+                <br />
+                <div class="mb-3">
+                    <form asp-action="Delete">
+                        <input type="submit" value="Remover" class="btn btn-outline-danger" />
+                        <a asp-action="Index"  class="btn btn-outline-secondary">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
