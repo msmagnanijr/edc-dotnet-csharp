@@ -1,0 +1,40 @@
+﻿@model AwesomeTomatoes.WEB.Models.FileInputModel
+
+@{
+    ViewData["Title"] = "Upload";
+}
+<div class="container">
+    <div class="row justify-content-md-center">
+        <h1 class="text-center mt-4 text-white">Upload da Imagem</h1>
+        <div class="card border-dark mb-5 shadow-sm rounded" style="max-width: 50rem;">
+            <div class="row">
+                <div class="col-md-4">
+                    <form method="post" enctype="multipart/form-data" asp-action="Upload" >
+                        <div class="form-group mt-3 mb-3">
+                            <label>Lista de Filmes: </label>
+                            <select asp-for="MovieId" class ="form-control" asp-items="ViewBag.MovieId">
+                            </select>
+                        </div>
+                        <div class="form-group mt-3 mb-3">
+                            <label>Descrição: </label>
+                            <input name="Description" class="form-control" />
+                        </div>
+                        <div class="form-group mt-3 mb-3">
+                           <input type="file" name="uploadfile" id="img" style="display:none;"/>
+                           <label for="img" class="text-info">Clique para selecionar a Imagem</label>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="submit" value="Salvar" class="btn btn-outline-primary" />
+                            <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+                        </div>
+                    </form>
+                    @ViewBag.Message
+                </div>
+            </div>
+        </div>
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
+    </div>
+</div>

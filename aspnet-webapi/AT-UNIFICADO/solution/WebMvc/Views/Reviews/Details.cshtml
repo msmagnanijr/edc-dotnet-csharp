@@ -1,0 +1,54 @@
+﻿@model Domain.Model.Entities.ReviewEntity
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <h1 class="text-center mt-4 text-white">Detalhes da Avaliação</h1>
+        <div class="card border-dark mb-5 shadow-sm rounded" style="max-width: 50rem;">
+            <div class="col-8 mt-4">
+                <dl class="row">
+                    <dt class = "col-sm-2">
+                         <label> @Html.DisplayNameFor(model => model.TextReview)  </label>
+                    </dt>
+                    <dd class = "col-sm-10">
+                         <label> <em> @Html.DisplayFor(model => model.TextReview) </em>  </label>
+                    </dd>
+                    <dt class = "col-sm-2">
+                         <label> @Html.DisplayNameFor(model => model.ReviwerSatisfaction)  </label>
+                    </dt>
+                    <dd class = "col-sm-10">
+                         <label> @Html.DisplayFor(model => model.ReviwerSatisfaction)  </label>
+                    </dd>
+                    <dt class = "col-sm-2">
+                         <label> @Html.DisplayNameFor(model => model.ReviewDate)  </label>
+                    </dt>
+                    <dd class = "col-sm-10">
+                         <label> @Html.DisplayFor(model => model.ReviewDate)  </label>
+                    </dd>
+                    <dt class = "col-sm-2">
+                         <label> @Html.DisplayNameFor(model => model.Movie)  </label>
+                    </dt>
+                    <dd class = "col-sm-10">
+                         <label> @Html.DisplayFor(model => model.Movie.Name)  </label>
+                    </dd>
+                </dl>
+            </div>
+            <br />
+            <div name="MovieInfo" class = "row">
+                <div class = "col-sm-3"></div>
+                <div class = "col-sm-6">
+                    @Html.Partial("_MovieDetail.cshtml")
+                </div>
+                <div class = "col-sm-3"></div>
+            </div>
+
+             <div class="mb-3">
+                @Html.ActionLink("Atualizar", "Edit", new {  id = Model.Id }, new { @class = "btn btn-outline-primary"})
+                <a asp-action="Index"   class="btn btn-outline-secondary">Voltar</a>
+            </div>
+         </div>
+    </div>
+</div>
