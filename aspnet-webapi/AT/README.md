@@ -13,4 +13,6 @@ Essa aplicação foi inspirada no Rotten Tomatoes que é um website americano, a
 * **username:** mmagnani
 * **password:** RedHat@2022
 
-![](images/app.png)
+### Exemplo de Execução da Aplicação
+
+![](images/app.gif)
