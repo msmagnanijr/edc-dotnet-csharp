@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "073c4993-9a8f-498c-9f17-9392630f1c5f",
+		"name": "awesome-tomatoes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list all movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibW1hZ25hbmkiLCJqdGkiOiI4MWZjMTMzNC05MjFhLTQ4N2YtYjQyMC1lMTA5NGQ4YWI3YjciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiQWRtaW4iLCJVc2VyIl0sImV4cCI6MTY1MzYyNDM0NSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1Mjk2IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo3MTg4In0.EGumUS8wTdDhhcypE_vHALOPm2RlYxS57hSz05b-Vnc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5188/api/Movies/getmovies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5188",
+					"path": [
+						"api",
+						"Movies",
+						"getmovies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibXNhbnRvcyIsImp0aSI6IjAwMWM3ZjM2LThlZTItNGUyZi1iMGU1LTNkYTQ4YjNlYThiMCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6WyJVc2VyIiwiQWRtaW4iXSwiZXhwIjoxNjUyOTA3NTU1LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjUyOTYiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjcyNDgifQ.S_tWnOZeE-jox8gleswNznyhvuESTvD6Q0sCCeYVMik",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5188/api/Movies/getmovie/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5188",
+					"path": [
+						"api",
+						"Movies",
+						"getmovie",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"name\": \"Magnani Filme\",\r\n        \"filmStudio\": \"Magnani Studio\",\r\n        \"releaseDate\": \"2007-07-27T00:00:00\",\r\n        \"boxOffice\": 527.00,\r\n        \"videoUrl\": \"https://www.youtube.com/embed/HRV6tMR-SSs\",\r\n        \"imageUrl\": \"https://mmagnaniazurestorage.blob.core.windows.net/awesometomatoescontainer/e4644271d54c4c09af1b61b32cd855bf.jpg\",\r\n        \"reviews\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5188/api/Movies/createmovie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5188",
+					"path": [
+						"api",
+						"Movies",
+						"createmovie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post like / dislike",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Duro de Matar\",\r\n  \"filmStudio\": \"Warner Bros\",\r\n  \"releaseDate\": \"1988-05-01T12:57:13.705Z\",\r\n  \"boxOffice\": 45\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5296/api/Movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5296",
+					"path": [
+						"api",
+						"Movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Duro de Matar II\",\r\n  \"filmStudio\": \"Warner Bros\",\r\n  \"releaseDate\": \"1988-05-01T12:57:13.705Z\",\r\n  \"boxOffice\": 45\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5296/api/Movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5296",
+					"path": [
+						"api",
+						"Movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Duro de Matar II\",\r\n  \"filmStudio\": \"Warner Bros\",\r\n  \"releaseDate\": \"1990-05-01T12:57:13.705Z\",\r\n  \"boxOffice\": 89\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5296/api/Movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5296",
+					"path": [
+						"api",
+						"Movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mmagnani\",\r\n    \"email\": \"mmagnani@gmail.com\",\r\n    \"password\": \"RedHat@2022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5188/api/Authenticate/register-admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5188",
+					"path": [
+						"api",
+						"Authenticate",
+						"register-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login/token user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mmagnani\",\r\n    \"password\": \"RedHat@2022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5188/api/Authenticate/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5188",
+					"path": [
+						"api",
+						"Authenticate",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload to azure",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"msantos\",\r\n    \"password\": \"DotNet@2022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5296/api/Authenticate/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5296",
+					"path": [
+						"api",
+						"Authenticate",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

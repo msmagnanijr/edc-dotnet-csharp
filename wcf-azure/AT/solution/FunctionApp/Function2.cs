@@ -17,7 +17,10 @@ public static class Function2
 
         using SqlConnection conn = new(connectionString);
         conn.Open();
-        var textSql = $@"UPDATE [dbo].[Movies] SET [LastViewQueue] = GETDATE() WHERE [Id] = {movie.Id};";
+
+        movie.TotalViewQueue++; 
+
+        var textSql = $@"UPDATE [dbo].[Movies] SET [TotalViewQueue] = {movie.TotalViewQueue} WHERE [Id] = {movie.Id};";
 
         using SqlCommand cmd = new(textSql, conn);
         var rowsAffected = cmd.ExecuteNonQuery();

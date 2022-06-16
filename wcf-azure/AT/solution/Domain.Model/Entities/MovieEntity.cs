@@ -41,6 +41,6 @@ public class MovieEntity : BaseEntity
     [Display(Name = "Último Acesso Síncrono")]
     public DateTime LastView { get; set; }
 
-    [Display(Name = "Último Acesso Assíncrono")]
-    public DateTime LastViewQueue { get; set; }
+    [Display(Name = "Total de Visitas")]
+    public int TotalViewQueue { get; set; }
 }

@@ -1,0 +1,45 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vulnerabilityAssessments_Default_storageContainerPath": {
+            "value": null
+        },
+        "servers_awesometomatoes_name": {
+            "value": null
+        },
+        "serverfarms_CloudConceptsFree_name": {
+            "value": null
+        },
+        "sites_web_api_awesome_tomatoes_name": {
+            "value": null
+        },
+        "sites_web_mvc_awesome_tomatoes_name": {
+            "value": null
+        },
+        "sites_CloudConcepts20220501122728_name": {
+            "value": null
+        },
+        "serverfarms_WebApi20220610015637Plan_name": {
+            "value": null
+        },
+        "components_web_api_awesome_tomatoes_name": {
+            "value": null
+        },
+        "components_web_mvc_awesome_tomatoes_name": {
+            "value": null
+        },
+        "storageAccounts_mmagnaniazurestorage_name": {
+            "value": null
+        },
+        "actionGroups_Application_Insights_Smart_Detection_name": {
+            "value": null
+        },
+        "smartdetectoralertrules_failure_anomalies___web_api_awesome_tomatoes_name": {
+            "value": null
+        },
+        "workspaces_DefaultWorkspace_87de8f1b_1fa0_4959_b25d_817be7a14934_CUS_externalid": {
+            "value": null
+        }
+    }
+}
